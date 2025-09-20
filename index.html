@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <!-- LEFT INFO -->
+    <div class="info-section">
+      <img src="logo.png" alt="Logo" class="logo" width="500px" height="100px">
+      <h1 style="text-decoration: underline; text-shadow: 2px 2px 5px black;">Recipe Finder</h1>
+      <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: italic;">Recipe Finder – Discover Your Next Favorite Dish
+Recipe Finder is a user-friendly web application designed to help food enthusiasts explore a world of culinary possibilities. Whether you’re looking for quick weeknight dinners, healthy meals, or decadent desserts, Recipe Finder makes it easy to find the perfect recipe. <br>
+
+Key Features: <br>
+
+Search Recipes Easily: Find recipes by ingredient, cuisine, or meal type. <br>
+
+Detailed Instructions: Step-by-step cooking instructions with estimated preparation times. <br>
+
+Save Favorites: Bookmark your favorite recipes for easy access later. <br>
+
+Filter Options: Filter recipes based on dietary preferences, difficulty level, or preparation time. <br>
+
+Inspiration Hub: Discover trending recipes and new ideas to spice up your meals. <br>
+
+Recipe Finder is your go-to companion for cooking inspiration, making meal planning simple, fun, and delicious!</p>
+      <div class="images">
+        <img src="img1.png" alt="not found">
+        <img src="img2.png" alt="">
+        <img src="img3.png" alt="">
+        <img src="img5.png" alt="" height="300px">
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-section">
+      <div class="form-box">
+        <form id="loginForm" onsubmit="loginUser(event)">
+          <h2>Login</h2>
+          <input type="text" id="username" placeholder="Username" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+          <p>New user? <span onclick="showSignup()">Sign Up</span></p>
+        </form>
+
+        <form id="signupForm" onsubmit="signupUser(event)" style="display:none;">
+          <h2>Sign Up</h2>
+          <input type="text" id="newUsername" placeholder="Username" required>
+          <input type="password" id="newPassword" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+          <p>Already have an account? <span onclick="showLogin()">Login</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Recipe Finder. All Rights Reserved.|Developed by Neha Arikatla. 
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

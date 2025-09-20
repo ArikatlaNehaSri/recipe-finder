@@ -1,0 +1,313 @@
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* LOGIN PAGE */
+.logo-container {
+  display: flex;
+  align-items: center; /* vertically center */
+  margin-left: 100px;  /* your existing left margin */
+  gap: 20px;            /* space between logo and text */
+}
+
+.info-section {
+  flex: 1;
+  background: #ff9900;
+  color: white;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.logo-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+.logo-text p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.images img {
+  width: 45%;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdf6f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOGIN PAGE LAYOUT */
+.login-container {
+  display: flex;
+  height: 100vh;   /* full height of the viewport */
+  overflow: hidden; /* stop whole page from scrolling */
+}
+
+.info-section {
+  flex: 1;
+  background: #ff9900;
+  color: white;
+  padding: 2rem;
+  overflow-y: auto; /* only left side scrolls */
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdf6f0;
+  overflow: hidden; /* right side never scrolls */
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-box {
+  width: 80%;
+  max-width: 300px;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-box input {
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-box button {
+  background: #ff9900;
+  color: white;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.form-box span {
+  color: #ff9900;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+/* DASHBOARD */
+.search-bar {
+  text-align: center;
+  margin: 1rem;
+}
+
+.search-bar input {
+  padding: 0.7rem;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.category-slider {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  margin: 1rem 0;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.category-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #fff;
+}
+
+.category-btn:hover {
+  background: #ffe0b3;
+  border: 1px solid #ff9900;
+}
+
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.recipe-card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  margin: 0.5rem 0;
+}
+
+.recipe-card a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #ff9900;
+  font-weight: bold;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* ===== SLIDER STYLES ===== */
+.slider-container {
+  overflow: hidden;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.slide span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+/* ===== FIXED FOOTER FOR HOME PAGE ===== */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.home-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.results-grid {
+  flex: 1; /* takes remaining space */
+}
+
+footer .author {
+  color: #ff9900;
+  font-weight: bold;
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}

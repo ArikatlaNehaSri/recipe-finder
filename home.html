@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== WELCOME / IMAGE SLIDER ===== -->
+ <!-- ===== WELCOME / IMAGE SLIDER ===== -->
+  <!-- ===== WELCOME / IMAGE SLIDER ===== -->
+<div class="logo-container">
+  <img src="logo.png" alt="Dosa" class="logo" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin-left: 100px; position: relative;">
+  <div class="logo-text">
+    <h1>Recipe Finder</h1>
+    <p style="color: royalblue;font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+Search recipes by ingredients <br>
+
+Explore categories: Breakfast, Lunch, Dinner, Snacks, Dessert, Beverages <br>
+
+Quick and easy cooking instructions <br>
+
+Save your favorite recipes <br>
+
+Discover new dishes every day</p>
+  </div>
+</div>
+
+
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by ingredients..." onkeyup="searchByIngredients()">
+  </div>
+
+  <!-- CATEGORY SLIDER -->
+  <div class="slider-container">
+    <div class="slider" id="categorySlider">
+      <div class="slide" onclick="fetchCategory('breakfast')">
+        <img src="breakfast.png" alt="Breakfast" height="300px">
+        <span>Breakfast</span>
+      </div>
+      <div class="slide" onclick="fetchCategory('lunch')">
+        <img src="img10.png" alt="Lunch" height="300px">
+        <span>Lunch</span>
+      </div>
+      <div class="slide" onclick="fetchCategory('dinner')">
+        <img src="img11.png" alt="Dinner" height="300px">
+        <span>Dinner</span>
+      </div>
+      <div class="slide" onclick="fetchCategory('snacks')">
+        <img src="img13.png" alt="Snacks" height="300px">
+        <span>Snacks</span>
+      </div>
+      <div class="slide" onclick="fetchCategory('dessert')">
+        <img src="img12.png" alt="Dessert" height="300px">
+        <span>Dessert</span>
+      </div>
+      <div class="slide" onclick="fetchCategory('beverages')">
+        <img src="img14.png" alt="Beverages" height="300px">
+        <span>Juice</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER / CATEGORIES BUTTONS -->
+  <div class="category-slider">
+    <button class="category-btn" onclick="fetchCategory('breakfast')">Breakfast</button>
+    <button class="category-btn" onclick="fetchCategory('lunch')">Lunch</button>
+    <button class="category-btn" onclick="fetchCategory('dinner')">Dinner</button>
+    <button class="category-btn" onclick="fetchCategory('snacks')">Snacks</button>
+    <button class="category-btn" onclick="fetchCategory('dessert')">Dessert</button>
+    <button class="category-btn" onclick="fetchCategory('beverages')">Juice</button>
+  </div>
+
+  <!-- RESULTS GRID -->
+  <div id="results" class="results-grid"></div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+
+
+
+  
+  <footer>
+    &copy; 2025 Recipe Finder. All Rights Reserved. | Developed by <span class="author">Neha Arikatla </span>
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
